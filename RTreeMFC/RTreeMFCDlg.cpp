@@ -102,6 +102,27 @@ BOOL CRTreeMFCDlg::OnInitDialog()
 	// TODO: 在此添加额外的初始化代码
 	m_tab.InsertItem(0, _T("tab1"));
 	m_tab.InsertItem(1, _T("tab2"));
+
+	
+	CRect rs;
+	m_tab.GetClientRect(&rs);
+	//////////////////  m_tab1  //////////////////
+	m_tab1dlg.Create(IDD_TAB1DLG, GetDlgItem(IDC_TAB));
+	rs.top += 32;
+	rs.bottom -= 12;
+	rs.left += 12;
+	rs.right -= 15;
+	m_tab1dlg.MoveWindow(&rs);
+	m_tab1dlg.ShowWindow(1);
+
+	///////////////////
+
+	///////////////////
+	///////////////////////////////////////////////
+
+
+
+
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 

@@ -4,6 +4,7 @@
 
 #pragma once
 #include "afxcmn.h"
+#include "Tab1Dlg.h"
 
 
 // CRTreeMFCDlg ¶Ô»°¿ò
@@ -34,4 +35,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	CTabCtrl m_tab;
+	CTab1Dlg m_tab1dlg;
 };
