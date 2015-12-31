@@ -58,6 +58,7 @@ CRTreeMFCDlg::CRTreeMFCDlg(CWnd* pParent /*=NULL*/)
 void CRTreeMFCDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_TAB, m_tab);
 }
 
 BEGIN_MESSAGE_MAP(CRTreeMFCDlg, CDialogEx)
@@ -99,7 +100,8 @@ BOOL CRTreeMFCDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	m_tab.InsertItem(0, _T("tab1"));
+	m_tab.InsertItem(1, _T("tab2"));
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
